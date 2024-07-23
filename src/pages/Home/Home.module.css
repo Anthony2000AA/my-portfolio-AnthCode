@@ -163,6 +163,12 @@
   max-width: 400px;
   max-height: 400px;
 }
+.buttonsCVWS {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
 .containerAbout .photo img:hover {
   transform: scale(0.9);
   transition: transform 0.5s;
@@ -274,6 +280,7 @@ img {
       height: 40px;
       font-size: 12px;
       margin-bottom: 10px;
+      margin-top: 10px;
     }
   }
   .profile {

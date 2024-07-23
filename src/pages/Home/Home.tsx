@@ -4,7 +4,7 @@ import { Button } from '@chakra-ui/react'
 import { TriangleDownIcon,  DownloadIcon } from "@chakra-ui/icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin ,faWhatsapp} from '@fortawesome/free-brands-svg-icons';
 import { useRef, useEffect } from "react";
 import TypewriterComponent from "../../components/typeWriter/TypeWriterComponent";
 import { Link } from 'react-scroll';
@@ -21,6 +21,14 @@ interface HomeProps {
 
 export default function Home({ isDarkMode, toggleTheme }: HomeProps) {
 
+
+  const whatsappNumber = '+51971595292'; 
+  const message = 'Hola Anthony!';
+
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+
+
   const handleDownload = () => {
     // Aquí se especifica la ruta al archivo PDF en la carpeta `public`
     const link = document.createElement('a');
@@ -34,7 +42,7 @@ export default function Home({ isDarkMode, toggleTheme }: HomeProps) {
 
   useEffect(() => {
     if (typewriterRef.current) {
-      // Re-initialize the typewriter effect if necessary
+   
       typewriterRef.current.start();
     }
   }, [isDarkMode]);
@@ -57,7 +65,7 @@ export default function Home({ isDarkMode, toggleTheme }: HomeProps) {
             <h3>Soy Anthony Avalos</h3>
 
             <div className={styles.description}>
-              <p>Desarrollador fullstack, apasionado por crear soluciones innovadoras y eficientes. Explora mis proyectos y habilidades.</p>
+              <p>Desarrollador fullstack, apasionado por crear soluciones de Software innovadoras y eficientes. Explora mis proyectos y habilidades.</p>
             </div>
             <div className={styles.button}>
               <Button rightIcon={<TriangleDownIcon />} colorScheme='teal' variant='outline'>
@@ -103,12 +111,20 @@ export default function Home({ isDarkMode, toggleTheme }: HomeProps) {
               tecnológicas innovadoras y eficientes. Mi entusiasmo por aprender nuevas tecnologías es
               inagotable, y disfruto aplicándolas en proyectos que marquen la diferencia. Actualmente,
               estoy cursando el cuarto año de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC) en Lima, Perú.
-              Mi objetivo es continuar creciendo profesionalmente y contribuir al desarrollo de la industria tecnológica con ideas frescas y creativas
+              Mi objetivo es continuar creciendo profesionalmente y contribuir al desarrollo de la industria tecnológica con ideas frescas y creativas.
+              Tienes una idea de software en mente? ¡Hablemos!
+              
             </p>
 
-            <Button leftIcon={<DownloadIcon />} colorScheme='teal' variant='solid' title="Descargar CV" onClick={handleDownload}>
-              CV
-            </Button>   
+            <div className={styles.buttonsCVWS}>
+              <Button leftIcon={<DownloadIcon />} colorScheme='teal' variant='solid' title="Descargar CV" onClick={handleDownload}>
+                CV
+              </Button> 
+              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+                              <FontAwesomeIcon icon={faWhatsapp} className= {isDarkMode ? styles.iconDark : styles.iconLigth } />
+                </a>
+            </div>
+           
           </div> 
         </div>
 
