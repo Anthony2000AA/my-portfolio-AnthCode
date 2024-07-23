@@ -29,7 +29,7 @@ export default function ModalAux({isDarkMode, infoProjectData, title}: ModalAuxP
           backdropFilter='blur(10px) hue-rotate(90deg)'
         />
       )
-    
+    /*
       const OverlayTwo = () => (
         <ModalOverlay
           bg='none'
@@ -37,7 +37,7 @@ export default function ModalAux({isDarkMode, infoProjectData, title}: ModalAuxP
           backdropInvert='80%'
           backdropBlur='2px'
         />
-      )
+      )*/
     
       const { isOpen, onOpen, onClose } = useDisclosure()
       const [overlay, setOverlay] = useState(<OverlayOne />)
