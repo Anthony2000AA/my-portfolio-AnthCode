@@ -56,6 +56,7 @@ export const infoProjectsZeballos:any[] =[
             `${relativePathProjects}zeballos/nueva-compra.png`,
             `${relativePathProjects}zeballos/pantalla-cuenta.png`,
             `${relativePathProjects}zeballos/transacciones.png`,
+            `${relativePathProjects}zeballos/panel-productos.jpeg`,
         ],
     },
     

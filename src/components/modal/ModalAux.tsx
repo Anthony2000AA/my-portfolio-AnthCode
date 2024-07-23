@@ -19,9 +19,11 @@ interface ModalAuxProps {
     isDarkMode: boolean;
     infoProjectData: any;
     title: string;
+    moreInfo: string;
+    nameProject: string;
 }
 
-export default function ModalAux({isDarkMode, infoProjectData, title}: ModalAuxProps) {
+export default function ModalAux({isDarkMode, infoProjectData, title, moreInfo,nameProject}: ModalAuxProps) {
 
     const OverlayOne = () => (
         <ModalOverlay
@@ -65,6 +67,11 @@ export default function ModalAux({isDarkMode, infoProjectData, title}: ModalAuxP
                   </div>
                   
                 </div>
+                
+                {
+                  nameProject === "FlexiDorm" ? 
+                  <p>{moreInfo}   <a className={styles.demo} href="https://www.youtube.com/watch?v=T6PL9CYZWZ8" target="_blank" rel="noopener noreferrer"><b>Ver video</b></a>. </p>: <p>{moreInfo}</p>
+                }
               </ModalBody>
               <ModalFooter>
                 <Button onClick={onClose}>Close</Button>

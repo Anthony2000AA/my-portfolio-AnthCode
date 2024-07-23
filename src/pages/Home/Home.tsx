@@ -11,7 +11,7 @@ import { Link } from 'react-scroll';
 import Carousel from "../../components/carousel/Carousel";
 import Project from "../../components/projects/Project";
 import { infoSkills } from "../../utils/Resourse";
-
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 interface HomeProps {
   isDarkMode: boolean;
@@ -21,6 +21,13 @@ interface HomeProps {
 
 export default function Home({ isDarkMode, toggleTheme }: HomeProps) {
 
+  const handleDownload = () => {
+    // Aquí se especifica la ruta al archivo PDF en la carpeta `public`
+    const link = document.createElement('a');
+    link.href = '/my-cv/CV_Anthony-Avalos-Santos.pdf';
+    link.download = 'CV_Anthony-Avalos-Santos.pdf';
+    link.click();
+  };
 
   
   const typewriterRef = useRef<any>(null);
@@ -65,7 +72,7 @@ export default function Home({ isDarkMode, toggleTheme }: HomeProps) {
 
           <div className={styles.profile}>
             <div className={styles.containerImage}>
-              <img src="https://avatars.githubusercontent.com/u/49091329?s=400&u=9b7b4e7c6c2f4b7f7f1b7b7c6c2f4b7f7f1b7b7c&v=4" alt="Anthony Avalos" />
+              <LazyLoadImage src="/profile/photo.jpg" alt="Anthony Avalos" />
             </div>
             <div className={styles.logos}>
               <a href="mailto:anthony482828@gmail.com" target="_blank" rel="noopener noreferrer" title="Enviar correo a Anthony">
@@ -87,7 +94,7 @@ export default function Home({ isDarkMode, toggleTheme }: HomeProps) {
       <section id="about" className={isDarkMode ? styles.darkMode : styles.lightMode}>
         <div className={styles.containerAbout}>
           <div className={styles.photo}>
-            <img src="https://avatars.githubusercontent.com/u/49091329?s=400&u=9b7b4e7c6c2f4b7f7f1b7b7c6c2f4b7f7f1b7b7c&v=4" alt="Anthony Avalos" />
+            <LazyLoadImage src="/profile/student-black.jpeg" alt="Anthony Avalos" />
           </div>
           <div className={`${styles.description} ${isDarkMode ? styles.descriptionDark: styles.descriptionLight}`}>
             <h1>Sobre mí</h1>
@@ -99,7 +106,7 @@ export default function Home({ isDarkMode, toggleTheme }: HomeProps) {
               Mi objetivo es continuar creciendo profesionalmente y contribuir al desarrollo de la industria tecnológica con ideas frescas y creativas
             </p>
 
-            <Button leftIcon={<DownloadIcon />} colorScheme='teal' variant='solid' title="Descargar CV">
+            <Button leftIcon={<DownloadIcon />} colorScheme='teal' variant='solid' title="Descargar CV" onClick={handleDownload}>
               CV
             </Button>   
           </div> 
