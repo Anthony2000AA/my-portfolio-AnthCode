@@ -1,0 +1,34 @@
+.typewriterDark {
+  color: white;
+  font-size: 6rem;
+  font-family: "Lalezar", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.typewriterLight {
+  color: rgb(44, 45, 54);
+
+  font-size: 6rem;
+  font-family: "Lalezar", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.cursor {
+  font-size: 5.8rem;
+  color: white;
+}
+
+/**Media querys */
+@media (max-width: 768px) {
+  .typewriterDark {
+    font-size: 3.3rem;
+  }
+  .typewriterLight {
+    font-size: 3.3rem;
+  }
+  .cursor {
+    font-size: 3.1rem;
+  }
+}
+
+/*<Home/>*/

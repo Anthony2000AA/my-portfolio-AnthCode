@@ -1,0 +1,165 @@
+.containerProjectsDark {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  background-color: #1f2028;
+  padding: 20px 20px 0px 20px;
+}
+.containerProjectsLight {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2efea;
+  padding: 20px 20px 0px 20px;
+}
+.zeballos,
+.flexiDorm,
+.pythonProyect {
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: transparent;
+}
+.contentModeDark {
+  background-color: white;
+  padding: 15px;
+}
+.titleModeDark {
+  color: black;
+}
+.titleModeLight {
+  color: white;
+}
+.imageProject {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 600px;
+    height: 350px;
+    min-width: 300px;
+  }
+}
+
+.description {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  max-height: 350px;
+  gap: 10px;
+  h2 {
+    text-align: start;
+    font-size: 25px;
+  }
+}
+.tecnologis {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  img {
+    width: 130px;
+    height: 40px;
+    border-radius: 7px;
+  }
+}
+img:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+.repositories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  a {
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 7px;
+    padding: 5px;
+  }
+}
+.iconDark,
+.iconLigth {
+  margin-right: 5px;
+}
+.buttonAction:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+  background-color: #1f2028;
+  color: #1f2028;
+}
+
+/*Media Queries*/
+
+@media (max-width: 1270px) {
+  .image {
+    order: 2;
+  }
+  .text {
+    order: 1;
+  }
+}
+@media (max-width: 908px) {
+  .containerProjectsDark {
+    padding: 15px;
+  }
+  .zeballos,
+  .flexiDorm,
+  .pythonProyect {
+    flex-direction: column;
+  }
+  .imageProject {
+    width: 100%;
+  }
+  .description {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .description {
+    margin-top: 10px;
+    h2 {
+      font-size: 20px;
+    }
+  }
+  .imageProject {
+    img {
+      width: 310px;
+      height: 210px;
+    }
+  }
+  .tecnologis {
+    gap: 5px;
+    img {
+      width: 110px;
+      height: 35px;
+      border-radius: 7px;
+    }
+  }
+  .repositories {
+    gap: 5px;
+    margin-top: 10px;
+    a {
+      text-decoration: none;
+      font-size: 15px;
+      border-radius: 7px;
+      padding: 5px;
+    }
+  }
+}

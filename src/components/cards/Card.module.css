@@ -1,0 +1,73 @@
+.chakracard {
+  width: 350px;
+  max-width: 400px;
+  height: 400px;
+  max-height: 400px;
+  padding: 20px;
+  border-radius: 300px;
+}
+
+.cardheader {
+  text-align: center;
+}
+.headerTextDark {
+  color: red;
+}
+.headerTextLight {
+  color: rgb(168, 0, 0);
+}
+.cardbody {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.imgOthers {
+  width: 120px;
+  height: 100px;
+}
+.imgProgramming {
+  width: 70px;
+  height: 70px;
+}
+
+.imgDatabases,
+.imgTools {
+  background-color: rgba(97, 97, 97, 0.418);
+  border-radius: 20px;
+}
+.imgTools {
+  height: 80px;
+}
+.imgToolsLight {
+  height: 80px;
+}
+
+/*Media querys*/
+@media (max-width: 768px) {
+  .chakracard {
+    width: 300px;
+    max-width: 280px;
+    height: 300px;
+    max-height: 300px;
+    padding: 10px;
+  }
+  .cardbody {
+    gap: 10px;
+  }
+  .imgOthers {
+    width: 100px;
+    height: 80px;
+  }
+  .imgProgramming {
+    width: 50px;
+    height: 50px;
+  }
+  .imgTools {
+    height: 60px;
+  }
+  .imgToolsLight {
+    height: 60px;
+  }
+}

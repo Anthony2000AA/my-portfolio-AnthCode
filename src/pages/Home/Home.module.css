@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+
+/* Estilos para el modo oscuro aplicado globalmente */
+.darkMode {
+  width: 100%;
+  height: 95%;
+  background-color: #1f2028;
+  transition: background-color 0.5s;
+}
+
+/* Estilos para el modo claro aplicado globalmente */
+.lightMode {
+  width: 100%;
+  background-color: #f2efea;
+  height: 95%;
+  transition: background-color 0.5s;
+}
+
+/* Estilos para el contenedor principal */
+.containerPrincipale,
+.button,
+.profile,
+.containerImage,
+.logos,
+.containerAbout,
+.containerSkills,
+.photo,
+.containerAbout .description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerPrincipale {
+  height: 100%;
+  width: 100%;
+  padding: 3rem;
+}
+
+.welcome {
+  width: 50%;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  max-width: 720px;
+  h3 {
+    font-size: 4rem;
+    word-spacing: 0.5rem;
+  }
+  p {
+    font-size: 1.4rem;
+  }
+}
+.welcomeDark h3,
+.welcomeDark p {
+  color: white;
+}
+.welcomeLight h3,
+.welcomeLight p {
+  color: rgb(44, 45, 54);
+}
+.containerWriter {
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  overflow: visible; /* Permite que el contenido desbordado sea visible */
+  display: inline-block; /* Asegura que el contenedor se ajuste al tamaño del contenido */
+  width: auto; /* Ajusta el ancho según sea necesario */
+}
+
+.description {
+  width: 95%;
+  max-width: 590px;
+  p {
+    letter-spacing: 1px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+}
+.button {
+  width: 100%;
+  margin-top: 35px;
+  Button {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    color: #1f2028;
+    font-size: 15px;
+    border-radius: 25px;
+    border: none;
+  }
+}
+
+.profile {
+  width: 50%;
+  max-width: 720px;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.containerImage {
+  max-width: 600px;
+  max-height: 600px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin-top: 35px;
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 550px;
+    max-height: 550px;
+    border-radius: 50%;
+    transition: all 0.5s;
+  }
+  img:hover {
+    /*hacia el fondo*/
+    transform: scale(0.9);
+    transition: transform 0.5s;
+  }
+}
+.logos {
+  gap: 1.5rem;
+  margin-top: 10px;
+}
+.iconDark {
+  color: white;
+  font-size: 48px;
+  transition: transform 0.3s;
+  transition: all 0.5s;
+}
+.iconLigth {
+  color: rgb(44, 45, 54);
+  font-size: 48px;
+  transition: transform 0.3s;
+  transition: all 0.5s;
+}
+.iconLigth:hover,
+.iconDark:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* ESTILOS PARA EL CONTENEDOR CONOCEME MAS */
+.containerAbout,
+.photo {
+  width: 100%;
+  height: 100%;
+}
+.containerAbout .photo,
+.containerAbout .description {
+  width: 50%;
+  max-width: 620px;
+  max-height: 620px;
+}
+.containerAbout .photo img {
+  border-radius: 50%;
+  transition: all 0.5s;
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 400px;
+}
+.containerAbout .photo img:hover {
+  transform: scale(0.9);
+  transition: transform 0.5s;
+}
+.descriptionDark,
+.skillsDark,
+.projectsDark {
+  background-color: #1f2028;
+  transition: all 0.5s;
+  h1,
+  p {
+    color: white;
+  }
+  Button {
+    background-color: white;
+    color: #1f2028;
+  }
+}
+.descriptionLight,
+.skillsLight,
+.projectsLight {
+  background-color: white;
+  h1,
+  p {
+    color: rgb(44, 45, 54);
+  }
+  Button {
+    background-color: rgb(44, 45, 54);
+    color: white;
+  }
+}
+.containerAbout .description,
+.containerSkills {
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  p {
+    font-size: 1.1rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    text-align: justify;
+  }
+  Button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 25px;
+    border: none;
+  }
+}
+img {
+  width: 100px;
+  height: 100px;
+}
+/*ESTILOS PARA EL CONTENEDOR DE HABILIDADES*/
+.containerSkills,
+.containerProjects {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.containerProjects {
+  h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+  }
+}
+
+/*Media querys*/
+@media (max-width: 768px) {
+  .containerPrincipale,
+  .containerAbout {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+  }
+  .darkMode,
+  .lightMode {
+    height: auto;
+  }
+  .welcome,
+  .containerAbout .description {
+    width: 100%;
+    h3 {
+      font-size: 2rem;
+    }
+  }
+  .description {
+    width: 100%;
+    p {
+      font-size: 1rem;
+    }
+  }
+  .button,
+  .containerAbout .description {
+    margin-top: 10px;
+    Button {
+      width: 120px;
+      height: 40px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+  }
+  .profile {
+    width: 100%;
+    margin: 0px;
+  }
+  .containerImage,
+  .photo {
+    max-width: 350px;
+    max-height: 350px;
+    img {
+      max-width: 300px;
+      max-height: 300px;
+    }
+  }
+  .logos {
+    gap: 1rem;
+  }
+  .iconDark,
+  .iconLigth {
+    font-size: 36px;
+  }
+
+  /* Estilos para el contenedor de conoceme mas */
+  .containerAbout .description {
+    order: 1;
+  }
+  .containerAbout .photo {
+    order: 2;
+  }
+  .containerSkills {
+    margin-top: 20px;
+    gap: 0px;
+  }
+  .containerAbout .description,
+  .containerSkills,
+  .containerProjects {
+    h1 {
+      font-size: 20px;
+    }
+  }
+}

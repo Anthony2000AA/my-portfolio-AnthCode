@@ -1,0 +1,143 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 60px;
+  align-items: center;
+  padding: 1rem;
+  background-color: #1f2028;
+  transition: background-color 0.5s;
+}
+
+.navbarDark {
+  background-color: #1f2028;
+  transition: background-color 0.5s;
+}
+
+.navbarLight {
+  background-color: #f2efea;
+  transition: background-color 0.5s;
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 50px;
+}
+
+.navItem {
+  margin: 0 1rem;
+}
+
+.navLinkDarkMode {
+  color: #a9adc1;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.5s;
+}
+
+.navLinkLightMode {
+  color: rgb(44, 45, 54);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.5s;
+}
+
+.navLink:hover {
+  font-size: 1.3rem;
+}
+.navLink:after,
+.navLink:before {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0);
+  bottom: 0px;
+  content: " ";
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all 280ms ease-in-out;
+  transition: all 280ms ease-in-out;
+  width: 0;
+}
+
+.navLink:hover:after,
+.navLink:hover:before {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-color: #fff;
+  -webkit-transition: width 350ms ease-in-out;
+  transition: width 350ms ease-in-out;
+  width: 90%;
+}
+
+.navLink:hover:before {
+  bottom: auto;
+  top: 0;
+  width: 90%;
+}
+
+.toggle {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 60px;
+    transition: all 0.5s;
+  }
+  .menuButton {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    font-size: 1.5rem;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+  .toggle {
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .navList {
+    margin-top: 60px;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .navListOpen {
+    margin-top: 60px;
+    display: flex;
+  }
+  .navListOpenHeigth {
+    height: 200px;
+  }
+
+  .navItem {
+    text-align: center;
+  }
+}
