@@ -1,6 +1,5 @@
 import { Card as ChakraCard, CardHeader, CardBody, Heading,  } from '@chakra-ui/react';
 import styles from './Card.module.css';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 interface CardProps {
     title: string;
@@ -23,24 +22,24 @@ export default function Card( {title, imgsUrl=[], isDarkMode}: CardProps) {
     <CardBody className={styles.cardbody}>
       {imagesUrls.map((imgUrl, index) => {
         if (title === "Lenguajes de programación") {
-          return <LazyLoadImage key={`${title}-${index}`} className={styles.imgProgramming} src={imgUrl} alt={title} />;
+          return <img key={`${title}-${index}`} className={styles.imgProgramming} src={imgUrl} alt={title} />;
         }
         if (title === "Bases de datos" && (index==0|| index==1) && isDarkMode ) {
-          return <LazyLoadImage key={`${title}-${index}`} className={styles.imgDatabases} src={imgUrl} alt={title} />;
+          return <img key={`${title}-${index}`} className={styles.imgDatabases} src={imgUrl} alt={title} />;
         }
         if (title === "Herramientas" && index==2 && isDarkMode) {
             
-          return <LazyLoadImage key={`${title}-${index}`} className={styles.imgTools} src={imgUrl} alt={title} />;
+          return <img key={`${title}-${index}`} className={styles.imgTools} src={imgUrl} alt={title} />;
         }
         if (title === "Herramientas" && index==2 && !isDarkMode) {
             
-            return <LazyLoadImage key={`${title}-${index}`} className={styles.imgToolsLight} src={imgUrl} alt={title} />;
+            return <img key={`${title}-${index}`} className={styles.imgToolsLight} src={imgUrl} alt={title} />;
         }
         if(title === "Frontend" && index==0 ){
-          return <LazyLoadImage key={`${title}-${index}`} className={styles.imgFrontend} src={imgUrl} alt={title} />;
+          return <img key={`${title}-${index}`} className={styles.imgFrontend} src={imgUrl} alt={title} />;
         
         }
-        return <LazyLoadImage key={`${title}-${index}`} className={styles.imgOthers} src={imgUrl} alt={title} />;
+        return <img key={`${title}-${index}`} className={styles.imgOthers} src={imgUrl} alt={title} />;
       })}
     </CardBody>
   </ChakraCard>
