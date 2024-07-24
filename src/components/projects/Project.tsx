@@ -110,7 +110,7 @@ export default function Project({ isDarkMode }: ProjectProps) {
                 <h2 className={isDarkMode ? styles.titleModeLight:styles.titleModeDark }>Hos-Friend</h2>
                 <p>Aplicacion de escritorio para el analisis de datos clinicos de pacientes con enfermedades en
                     comun, para elegir mejor opcion a que centro medico acudir tomando en cuenta que diversos
-                    factores y algoritmos. Este proyecto fue desarrollado en Python y se utilizo la libreria Tkinter para la interfaz grafica y datasets de pacientes y centros medicos.
+                    factores y algoritmos. Este proyecto fue desarrollado en Python y se utilizo la libreria Tkinter para la interfaz de usuario, Matplotlib para la creacion de graficos y datasets de pacientes y centros medicos.
                     </p>
                 <div className={styles.tecnologis}>
                     <LazyLoadImage className={styles.labelTech} src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />

@@ -23,7 +23,7 @@ export default function Home({ isDarkMode, toggleTheme }: HomeProps) {
 
 
   const whatsappNumber = '+51971595292'; 
-  const message = 'Hola Anthony!';
+  const message = 'Hola Anthony! Tengo en mente un proyecto, ¿podrías ayudarme?';
 
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
