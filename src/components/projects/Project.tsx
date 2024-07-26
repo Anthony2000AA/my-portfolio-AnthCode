@@ -37,7 +37,7 @@ export default function Project({ isDarkMode }: ProjectProps) {
                 <p>
                     Aplicacion web para la gestion de creditos de pequeños negocios (bodegas) para clientes frecuentes.
                     Permite ver el detalle de cada transaccion/consumo realizada por el cliente, asi como tambien los
-                    intereses generados. Este proyecto posee una aplicacion web front-end y una API backend. Ver  <a className={styles.demo} href="https://test-zeballos.vercel.app/" target="_blank" rel="noopener noreferrer"><b>demo</b></a>.
+                    intereses generados. Este proyecto posee una aplicacion web front-end y una API backend.
 
                 </p>
                 <div className={styles.tecnologis}>
@@ -72,7 +72,7 @@ export default function Project({ isDarkMode }: ProjectProps) {
                 <h2 className={isDarkMode ? styles.titleModeLight:styles.titleModeDark}>FlexiDorm</h2>
                 <p>
                     Aplicacion web para la gestion de alquileres temporales de habitaciones propocionadas por arrendadores para estudiantes universitarios.
-                    Permite realizar reserva de habitaciones aledañas a la universidad. Este proyecto posee una aplicacion web front-end y una  API RESTful en el back-end. Ver  <a className={styles.demo} href="https://flex-dorm-web-application-mu.vercel.app/login" target="_blank" rel="noopener noreferrer"><b>demo</b></a>.
+                    Permite realizar reserva de habitaciones aledañas a la universidad. Este proyecto posee una aplicacion web front-end y una  API RESTful en el back-end.
                 </p>
                 <div className={styles.tecnologis}>
                 <LazyLoadImage src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular.js" />
