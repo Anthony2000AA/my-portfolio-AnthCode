@@ -254,6 +254,7 @@ img {
   overflow-y: scroll;
   background-color: transparent;
   align-items: center;
+  margin-bottom: 30px;
 }
 .darkModeExperience,
 .lightModeExperience {
