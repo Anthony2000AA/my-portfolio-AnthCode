@@ -6,3 +6,9 @@
 p {
   margin-top: 7px;
 }
+.pDark {
+  color: white;
+}
+.pLight {
+  color: black;
+}

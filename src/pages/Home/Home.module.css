@@ -238,7 +238,8 @@ img {
   background-color: transparent;
 }
 
-.containerProjects {
+.containerProjects,
+.containerExperience {
   h1 {
     font-size: 40px;
     letter-spacing: 2px;
@@ -246,6 +247,30 @@ img {
   }
 }
 
+/*CONTENEDOR EXPERIENCIA*/
+.containerExperience {
+  width: 100%;
+  height: auto;
+  overflow-y: scroll;
+  background-color: transparent;
+  align-items: center;
+}
+.darkModeExperience,
+.lightModeExperience {
+  width: 100%;
+  height: 95%;
+  transition: background-color 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.darkModeExperience {
+  background-color: #1f2028;
+}
+/* Estilos para el modo claro aplicado globalmente */
+.lightModeExperience {
+  background-color: #f2efea;
+}
 /*Media querys*/
 @media (max-width: 768px) {
   .containerPrincipale,
@@ -307,8 +332,13 @@ img {
   /* Estilos para el contenedor de conoceme mas */
   .containerAbout .description {
     order: 1;
+    max-height: auto;
+    p {
+      font-size: 1rem;
+    }
   }
   .containerAbout .photo {
+    max-height: auto;
     order: 2;
   }
   .containerSkills {
@@ -317,6 +347,7 @@ img {
   }
   .containerAbout .description,
   .containerSkills,
+  .containerExperience,
   .containerProjects {
     h1 {
       font-size: 20px;

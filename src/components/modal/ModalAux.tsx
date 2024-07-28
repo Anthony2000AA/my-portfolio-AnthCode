@@ -57,10 +57,10 @@ export default function ModalAux({isDarkMode, infoProjectData, title, moreInfo,n
           
           <Modal isCentered isOpen={isOpen} onClose={onClose} size={'xl'}>
             {overlay}
-            <ModalContent>
-              <ModalHeader display={'flex'} justifyContent={'center'}>{title}</ModalHeader>
+            <ModalContent bg={isDarkMode? '#1f2028': 'white'}>
+              <ModalHeader display={'flex'} color={isDarkMode? 'white': 'black'} justifyContent={'center'}>{title}</ModalHeader>
               <ModalCloseButton />
-              <ModalBody>
+              <ModalBody className={`${isDarkMode? styles.pDark: styles.pLigth}`}>
                 <div className="contentModal">
                   <div className="images">
                       <Carousel isDarkMode={isDarkMode} resources={infoProjectData} modal={true}/>
@@ -70,7 +70,7 @@ export default function ModalAux({isDarkMode, infoProjectData, title, moreInfo,n
                 
                 {
                   nameProject === "FlexiDorm" ? 
-                  <p>{moreInfo}   <a className={styles.demo} href="https://www.youtube.com/watch?v=T6PL9CYZWZ8" target="_blank" rel="noopener noreferrer"><b>Ver video</b></a>. </p>: <p>{moreInfo}</p>
+                  <p >{moreInfo}   <a  href="https://www.youtube.com/watch?v=T6PL9CYZWZ8" target="_blank" rel="noopener noreferrer"><b>Ver video</b></a>. </p>: <p>{moreInfo}</p>
                 }
               </ModalBody>
               <ModalFooter>

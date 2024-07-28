@@ -90,3 +90,27 @@ export const infoProjectsPython:any[] =[
         ],
     },
 ]
+
+
+//EXPERIENCIA LABORAL
+export const infoProjectsTornella: any[]=[
+    {
+        title: "Proyecto Tornela-Pasteleria",
+        imgUrl:[
+            `${relativePathProjects}tornella/home-section-1.jpg`,
+            `${relativePathProjects}tornella/home-section-2.jpg`,
+            `${relativePathProjects}tornella/home-section-3.jpg`,
+            `${relativePathProjects}tornella/home-section-4.jpg`,
+            `${relativePathProjects}tornella/home-section-5.jpg`,
+            `${relativePathProjects}tornella/more-orders.jpg`,
+            `${relativePathProjects}tornella/morsels.jpg`,
+            `${relativePathProjects}tornella/pack-cake.jpg`,
+            `${relativePathProjects}tornella/panel-admin-promotion.jpg`,
+            `${relativePathProjects}tornella/panel-admin.jpg`,
+            `${relativePathProjects}tornella/register.jpg`,
+            `${relativePathProjects}tornella/screen-mobile-1.jpg`,
+            `${relativePathProjects}tornella/screen-mobile-2.jpg`,
+        ]
+    }
+
+]

@@ -12,6 +12,7 @@ import Carousel from "../../components/carousel/Carousel";
 import Project from "../../components/projects/Project";
 import { infoSkills } from "../../utils/Resourse";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import Timeline from "../../components/timeline/Timeline";
 
 interface HomeProps {
   isDarkMode: boolean;
@@ -139,6 +140,24 @@ export default function Home({ isDarkMode, toggleTheme }: HomeProps) {
           <Carousel isDarkMode={isDarkMode} resources={infoSkills} modal={false}/>
         </div>
       </section>
+
+      <section id="experience" className={isDarkMode ? styles.darkModeExperience : styles.lightModeExperience}>
+      <div className={`${styles.containerExperience} ${isDarkMode? styles.skillsDark: styles.skillsLight}`}>
+          <h1>Experiencia laboral</h1>
+
+            <Timeline isDarkMode={isDarkMode} />
+
+        </div>
+      </section>
+
+
+
+    
+
+
+
+
+
       
       <section id="projects" className={isDarkMode ? styles.darkMode : styles.lightMode}>
       
