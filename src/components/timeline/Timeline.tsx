@@ -8,7 +8,7 @@ import { infoProjectsTornella } from '../../utils/Resourse';
   const milestones = [
     {
       id: 1,
-      date: 'Marzo - Febrero, 2024',
+      date: 'Enero - Febrero, 2024 (Freenlace)',
       title: 'Pasteleria Tornella',
       description: `Realize una aplicacion fullstack para la gestion del stock de productos, promociones, y demas servicios de la pasteleria. Tuvo una vista de clientes y otra vista para el administrador de estos productos y servicios en mencion. Me encargue desde la parte de UX/UI hasta el desarrollo del front-end, back-end y el despliegue.`
     },
